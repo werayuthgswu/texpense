@@ -4,6 +4,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: aws-secret
 
     steps:
       - name: Checkout source
