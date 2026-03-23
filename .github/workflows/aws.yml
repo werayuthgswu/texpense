@@ -23,6 +23,9 @@ jobs:
           echo "[default]" > ~/.aws/config
           echo "region = us-east-1" >> ~/.aws/config
 
+      - name: Debug AWS credentials
+        run: cat ~/.aws/credentials
+          
       - name: Upload to S3
         run: |
           aws s3 cp app.zip s3://app-werayuth/app-${{ github.sha }}.zip
