@@ -30,4 +30,7 @@ jobs:
 
     - name: Test
       run: npm run test
+
+    - name: Playwright Test
+      run: npx playwright test
         
